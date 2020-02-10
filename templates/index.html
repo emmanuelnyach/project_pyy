@@ -1,0 +1,12 @@
+{% extends 'layout.html'%}
+{% block content %}
+    {{ pie_data }}
+    <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, eveniet, non! Animi dignissimos in nisi perferendis! Commodi culpa deserunt doloribus dolorum harum magnam molestiae perspiciatis possimus vitae. Dolore, non, ullam.</h1>
+    <!-- Don't forget the "|safe"! -->
+<div id="chart">
+   <embed type="image/svg+xml" src= {{ pie_data|safe }} />
+</div>
+    <div id="chart">
+   <embed type="image/svg+xml" src= {{ line_data|safe }} />
+</div>
+{% endblock %}
